@@ -1,21 +1,21 @@
 module.exports = {
   entry: {
-    main: "./src/index.js",
-    vendor: "./src/vendor.js"
+    main: './src/index.js',
+    vendor: './src/vendor.js'
   },
   module: {
     rules: [
       {
         test: /\.html$/,
-        use: ["html-loader"]
+        use: ['html-loader']
       },
       {
         test: /\.(svg|png|jpg|gif)$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: "[name].[hash].[ext]",
-            outputPath: "images"
+            name: '[name].[hash].[ext]',
+            outputPath: 'images'
           }
         }
       },
@@ -25,6 +25,18 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       }
     ]
   }
