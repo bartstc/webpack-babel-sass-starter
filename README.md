@@ -41,19 +41,32 @@ npm run build (webpack --config webpack.prod.js)
 |   |-- assets // images, icons, movies etc.
 |   |
 |   |
+|   |-- icons-manifest // Manifest icons
+|   |
+|   |
 |   |-- js // MVC pattern
 |   |   |-- controllers
 |   |   |-- models
 |   |   |-- views
 |   |
+|   |
 |   |-- sass
 |   |   |-- modules // util styles like colors, typography, mixins etc.
 |   |   |-- normalize // normalize.scss
 |   |   |-- partials // divided styles responsible for individual sections of the application
+|   |
+|   |
+|   |-- static // robos.txt, sitemap.xml etc.
+|   |
+|   |
+|   |-- templates // all html files
+|   |
 |
-|-- index.js // entry point for webpack
+|-- favicon.ico // -
+|-- index.js // entry js point for webpack
 |-- main.scss // styles main file
 |-- template.html // entry html structure of app
+|-- src-sw.js // Service Worker setup
 |-- vendor.js // libraries like bootstrap, jquery, lodash
 ```
 
